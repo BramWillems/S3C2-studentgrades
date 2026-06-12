@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+bkt_predictions.csv
+5kfiles_kt1.csv
 # C extensions
 *.so
 
@@ -179,5 +181,5 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
-25kfiles_kt1.csv
+5kfiles_kt1.csv
 bkt_params.csv
