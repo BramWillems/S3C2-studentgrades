@@ -43,7 +43,7 @@ with col1:
     """)
 
 with col2:
-    params_file = Path(__file__).parent / "data" / "bkt_parameters.csv"
+    params_file = Path(__file__).parent.parent / "data" / "bkt_parameters.csv"
     if params_file.exists():
         try:
             params_df = pd.read_csv(params_file)
@@ -71,7 +71,7 @@ with col2:
 # ─────────────────────────────────────────────────────────────────────────────
 st.subheader("2️⃣ Skill Difficulty vs. Learnability")
 
-skill_plot = Path(__file__).parent / "data" / "bkt_skill_space.png"
+skill_plot = Path(__file__).parent.parent / "data" / "bkt_skill_space.png"
 if skill_plot.exists():
     st.image(str(skill_plot), use_container_width=True)
     st.markdown("""
@@ -91,7 +91,7 @@ st.subheader("3️⃣ Learning Curves by Skill")
 
 col1, col2 = st.columns(2, gap="large")
 
-learning_plot = Path(__file__).parent / "data" / "bkt_learning_curves.png"
+learning_plot = Path(__file__).parent.parent / "data" / "bkt_learning_curves.png"
 if learning_plot.exists():
     with col1:
         st.image(str(learning_plot), use_container_width=True)
@@ -121,8 +121,8 @@ else:
 # ─────────────────────────────────────────────────────────────────────────────
 st.subheader("4️⃣ Skill Mastery Status")
 
-mastery_plot = Path(__file__).parent / "data" / "bkt_mastery.png"
-mastery_data = Path(__file__).parent / "data" / "bkt_mastery_data.csv"
+mastery_plot = Path(__file__).parent.parent / "data" / "bkt_mastery.png"
+mastery_data = Path(__file__).parent.parent / "data" / "bkt_mastery_data.csv"
 
 col1, col2 = st.columns(2, gap="large")
 

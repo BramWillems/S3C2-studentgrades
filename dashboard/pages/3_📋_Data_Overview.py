@@ -13,7 +13,7 @@ st.markdown("---")
 # ─────────────────────────────────────────────────────────────────────────────
 st.subheader("Dataset Summary")
 
-summary_file = Path(__file__).parent / "data" / "data_summary.csv"
+summary_file = Path(__file__).parent.parent / "data" / "data_summary.csv"
 if summary_file.exists():
     try:
         summary_df = pd.read_csv(summary_file)
@@ -56,7 +56,7 @@ st.subheader("Performance Distribution")
 
 col1, col2 = st.columns(2, gap="large")
 
-perf_dist = Path(__file__).parent / "data" / "performance_distribution.png"
+perf_dist = Path(__file__).parent.parent / "data" / "performance_distribution.png"
 if perf_dist.exists():
     with col1:
         st.image(str(perf_dist), use_container_width=True)
@@ -84,7 +84,7 @@ with col2:
 # ─────────────────────────────────────────────────────────────────────────────
 st.subheader("Interaction Patterns")
 
-pattern_file = Path(__file__).parent / "data" / "interaction_patterns.csv"
+pattern_file = Path(__file__).parent.parent / "data" / "interaction_patterns.csv"
 if pattern_file.exists():
     try:
         patterns_df = pd.read_csv(pattern_file)
@@ -109,7 +109,7 @@ if pattern_file.exists():
                 st.markdown(f"**Mean**: {seq_lens.mean():.1f} interactions per student")
         
         with col2:
-            seq_length_plot = Path(__file__).parent / "data" / "sequence_lengths.png"
+            seq_length_plot = Path(__file__).parent.parent / "data" / "sequence_lengths.png"
             if seq_length_plot.exists():
                 st.image(str(seq_length_plot), use_container_width=True)
                 st.caption("Distribution of sequence lengths per student")
@@ -126,13 +126,13 @@ st.subheader("Skill Coverage")
 
 col1, col2 = st.columns(2, gap="large")
 
-skill_dist = Path(__file__).parent / "data" / "skill_distribution.png"
+skill_dist = Path(__file__).parent.parent / "data" / "skill_distribution.png"
 if skill_dist.exists():
     with col1:
         st.image(str(skill_dist), use_container_width=True)
         st.caption("Number of interactions per skill")
 
-skill_table = Path(__file__).parent / "data" / "skill_statistics.csv"
+skill_table = Path(__file__).parent.parent / "data" / "skill_statistics.csv"
 if skill_table.exists():
     try:
         skills_df = pd.read_csv(skill_table)

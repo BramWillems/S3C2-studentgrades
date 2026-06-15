@@ -41,7 +41,7 @@ with col1:
 
 with col2:
     # Load performance metrics
-    perf_file = Path(__file__).parent / "data" / "dkt_performance.csv"
+    perf_file = Path(__file__).parent.parent / "data" / "dkt_performance.csv"
     if perf_file.exists():
         try:
             perf_df = pd.read_csv(perf_file)
@@ -75,7 +75,7 @@ with col2:
 # ─────────────────────────────────────────────────────────────────────────────
 st.subheader("2️⃣ Training Progress")
 
-train_plot = Path(__file__).parent / "data" / "dkt_training_curves.png"
+train_plot = Path(__file__).parent.parent / "data" / "dkt_training_curves.png"
 if train_plot.exists():
     col1, col2 = st.columns(2, gap="large")
     
@@ -128,7 +128,7 @@ with col1:
     """)
 
 with col2:
-    learner_file = Path(__file__).parent / "data" / "sample_learner_profile.csv"
+    learner_file = Path(__file__).parent.parent / "data" / "sample_learner_profile.csv"
     if learner_file.exists():
         try:
             learner_df = pd.read_csv(learner_file)
@@ -152,13 +152,13 @@ st.subheader("4️⃣ Knowledge State Evolution")
 col1, col2 = st.columns(2, gap="large")
 
 with col1:
-    pred_skills_plot = Path(__file__).parent / "data" / "dkt_predicted_skills.png"
+    pred_skills_plot = Path(__file__).parent.parent / "data" / "dkt_predicted_skills.png"
     if pred_skills_plot.exists():
         st.image(str(pred_skills_plot), use_container_width=True)
         st.caption("Predicted probabilities for next attempt across all skills")
 
 with col2:
-    knowledge_plot = Path(__file__).parent / "data" / "dkt_knowledge_trajectory.png"
+    knowledge_plot = Path(__file__).parent.parent / "data" / "dkt_knowledge_trajectory.png"
     if knowledge_plot.exists():
         st.image(str(knowledge_plot), use_container_width=True)
         st.caption("How knowledge estimate for one skill evolves over time")
@@ -199,7 +199,7 @@ with insight3:
 # ─────────────────────────────────────────────────────────────────────────────
 st.subheader("5️⃣ Prediction Accuracy")
 
-accuracy_file = Path(__file__).parent / "data" / "dkt_accuracy_summary.csv"
+accuracy_file = Path(__file__).parent.parent / "data" / "dkt_accuracy_summary.csv"
 if accuracy_file.exists():
     try:
         accuracy_df = pd.read_csv(accuracy_file)
