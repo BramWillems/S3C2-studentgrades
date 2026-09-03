@@ -23,7 +23,7 @@ results consistent with the full analysis in the notebook.
 
 ## Data
 
-The dataset is [EdNet](link-to-ednet), which contains roughly a million
+The dataset is [EdNet](https://github.com/riiid/ednet), which contains roughly a million
 students' interactions (~10GB) with a standardized English test in South
 Korea, in a multiple-choice format. Because it's a standardized test, the
 relative differences in performance between students should generalize
